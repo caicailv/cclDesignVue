@@ -13,7 +13,8 @@
   ],
   "scripts": {
     "start": "vite --config ./start/vite.config.ts  serve ./start/",
-    "commit": "cz"
+    "commit": "cz",
+    "prepare": "husky install"
   },
   "description": "",
   "keywords": [],
@@ -26,6 +27,7 @@
     "@vitejs/plugin-vue": "^4.1.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3",
     "sass": "^1.62.0",
     "vite": "^4.2.1",
     "vite-plugin-vue-setup-extend": "^0.4.0"
