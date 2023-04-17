@@ -1,0 +1,14 @@
+{
+  "name": "start",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "rimraf dist && vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "ccl-design": "workspace:*"
+  }
+}

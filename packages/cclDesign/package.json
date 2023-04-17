@@ -1,0 +1,21 @@
+{
+  "name": "ccl-design",
+  "description": "",
+  "version": "1.0.0",
+  "keywords": [
+    "ccl",
+    "design",
+    "ccl-design",
+    "vuejs",
+    "components",
+    "ui",
+    "vite",
+    "vue3",
+    "css",
+    "setup",
+    "typescript",
+    "javascript"
+  ],
+  "main": "main.ts"
+
+}
