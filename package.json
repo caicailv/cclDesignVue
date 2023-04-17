@@ -12,7 +12,8 @@
     "start"
   ],
   "scripts": {
-    "start": "vite --config ./start/vite.config.ts  serve ./start/"
+    "start": "vite --config ./start/vite.config.ts  serve ./start/",
+    "commit": "cz"
   },
   "description": "",
   "keywords": [],
