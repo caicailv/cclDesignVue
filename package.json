@@ -20,6 +20,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
     "@types/node": "^18.15.11",
     "@vitejs/plugin-vue": "^4.1.0",
     "commitizen": "^4.3.0",
