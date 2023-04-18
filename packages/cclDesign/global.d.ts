@@ -9,17 +9,16 @@ import type * as components from './components'
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     CButton: typeof components.CButton
-    FInfiniteScrolling: typeof components.FInfiniteScrolling
   }
 
   interface ComponentCustomProperties {
-    FMessage: typeof components.FMessage
-    FNotification: typeof components.FNotification
+    // FMessage: typeof components.FMessage
+    // FNotification: typeof components.FNotification
   }
 }
 
-declare global {
-  const __DEV__: boolean
-}
+// declare global {
+//   const __DEV__: boolean
+// }
 
 export {}

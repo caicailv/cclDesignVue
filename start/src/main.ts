@@ -1,4 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import Ccl from '../../packages/cclDesign/main'
-createApp(App).use(Ccl).mount('#root')
+const app = createApp(App)
+app.use(Ccl)
+app.mount('#root')
+const componentNames = Object.keys(app.component);
+console.log(componentNames);
