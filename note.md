@@ -24,3 +24,9 @@ STATUSES 常量中的每个元素都是只读的字面量类型，不能被修�
 ```ts
 export const STATUSES = ['normal', 'success', 'warning', 'danger'] as const
 ```
+
+### 自动化测试 
+- 使用vitest来集成jest测试,
+- 用`@vue/test-utils`来进行vue的组件测试
+- 一般组件库用单测+快照测试比较多
+

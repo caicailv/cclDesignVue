@@ -8,7 +8,7 @@
           `${typeItem}+${statusItem}` }}</c-button>
       </template>
     </template>
-
+    <c-button @click="cbtnClick" disabled>disabled</c-button>
   </div>
 </template>
 
@@ -27,4 +27,6 @@ const shapeFn = (i: number) => {
 const cbtnClick = () => {
   console.log('cbtnClick');
 }
+
+
 </script>

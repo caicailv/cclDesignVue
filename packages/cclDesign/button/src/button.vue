@@ -1,11 +1,11 @@
 <template>
-  <button :class="classList">
+  <button :disabled="disabled" :class="classList">
     <slot></slot>
   </button>
 </template>
 <script lang="ts" setup name="CButton">
 import type { PropType, } from 'vue';
-import { computed, defineProps } from 'vue';
+import { computed } from 'vue';
 import { Status, Size } from '../../_utils/constant';
 
 const props = defineProps(
