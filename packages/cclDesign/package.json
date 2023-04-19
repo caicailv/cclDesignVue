@@ -1,7 +1,7 @@
 {
   "name": "ccl-design",
-  "description": "",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "description": "ccl design can quickly build interactive interfaces in vue3 applications.",
   "keywords": [
     "ccl",
     "design",
@@ -16,6 +16,12 @@
     "typescript",
     "javascript"
   ],
-  "main": "main.ts"
+  "main": "main.ts",
+  "author": {
+    "name": "caicailv",
+    "url": "https://github.com/caicailv"
+  },
+  "license": "MIT"
+
 
 }
