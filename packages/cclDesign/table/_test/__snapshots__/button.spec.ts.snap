@@ -1,5 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`CButton > click 1`] = `"<button disabled=\\"\\" class=\\"c-button c-button--primary c-button--disabled\\"></button>"`;
-
-exports[`CButton 1`] = `"<button class=\\"c-button c-button--secondary\\"></button>"`;
