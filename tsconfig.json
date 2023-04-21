@@ -23,7 +23,7 @@
     "packages/**/*.tsx",
     "packages/**/*.vue",
     "packages/global.d.ts"
-  ],
+, "vite.config.build.ts"  ],
   "references": [
     {
       "path": "./tsconfig.node.json"
