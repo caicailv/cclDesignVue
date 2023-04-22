@@ -4,8 +4,8 @@ import * as components from './components'
 export default {
   install(app: App) {
     // 遍历所有组件去注册
-    for(const key in components) {
-      const component = components[key]
+    for (const key in components) {
+      const component = components[key] 
       app.component(component.name, component)
     }
   },

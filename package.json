@@ -1,5 +1,5 @@
 {
-  "name": "ccl-design",
+  "name": "ccl-design-vue",
   "private": false,
   "version": "1.0.0",
   "config": {
@@ -25,6 +25,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "ccl-design": "workspace:*",
     "@commitlint/cli": "^17.6.1",
     "@commitlint/config-conventional": "^17.6.1",
     "@types/node": "^18.15.11",

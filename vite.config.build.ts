@@ -4,7 +4,12 @@ import dts from 'vite-plugin-dts'
 import VueSetupExtend from 'vite-plugin-vue-setup-extend'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { resolve } from 'path'
+import { copyFileSync } from 'fs'
+// @ts-ignore
+import { name, version } from './packages/ccl-design/package.json'
+
 let buildDir = resolve(__dirname, './dist')
+let componentDir = resolve(__dirname, './packages/ccl-design')
 export default defineConfig(() => {
   return {
     plugins: [
@@ -16,11 +21,9 @@ export default defineConfig(() => {
         insertTypesEntry: true /** 是否生成类型声明入口 */,
         cleanVueFileName: true /** 是否将 '.vue.d.ts' 文件名转换为 '.d.ts' */,
         copyDtsFiles: true /** 是否将源码里的 .d.ts 文件复制到 outputDir */,
-        include: ['./packages/cclDesign'] /** 手动设置包含路径的 glob */,
+        include: ['./packages/ccl-design'] /** 手动设置包含路径的 glob */,
         /** 构建后回调钩子 */
-        afterBuild: (): void => {
-          console.log('dts afterBuild');
-        }
+        afterBuild: copyPackageJSON,
       }),
 
       visualizer(),
@@ -34,7 +37,10 @@ export default defineConfig(() => {
       outDir: buildDir /** 指定输出路径 */,
       lib: {
         name: 'ccl-design',
-        entry: resolve(__dirname, './packages/cclDesign/main.ts') /** 打包入口 */,
+        entry: resolve(
+          __dirname,
+          './packages/ccl-design/main.ts'
+        ) /** 打包入口 */,
       },
       rollupOptions: {
         external: ['vue'] /** 确保外部化处理那些你不想打包进库的依赖 */,
@@ -56,3 +62,24 @@ export default defineConfig(() => {
     },
   }
 })
+
+/** 打包结束之后将一些静态文件进行移入 */
+const copyPackageJSON = (): void => {
+  const files = [
+    { input: './packages/ccl-design/README.md', outDir: './dist/README.md' },
+    {
+      input: './packages/ccl-design/package.json',
+      outDir: './dist/package.json',
+    },
+    {
+      input: './packages/ccl-design/LICENSE',
+      outDir: './dist/LICENSE',
+    },
+  ]
+
+  files.forEach((item) => {
+    copyFileSync(item.input, item.outDir)
+  })
+
+  console.warn(`\n ${name} ${version} 版本打包成功 \n`)
+}

@@ -16,7 +16,7 @@
     "typescript",
     "javascript"
   ],
-  "main": "main.ts",
+  "main": "index.js",
   "author": {
     "name": "caicailv",
     "url": "https://github.com/caicailv"

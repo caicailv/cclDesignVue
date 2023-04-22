@@ -10,9 +10,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
     "lib": ["ESNext", "DOM"],
     "paths": {
-      // "ccl-design": ["./packages/cclDesign/index.ts"],
+      // "ccl-design": ["./packages/ccl-design/index.ts"],
     },
     "skipLibCheck": true,
     "types": ["node"]
@@ -22,8 +24,10 @@
     "packages/**/*.d.ts",
     "packages/**/*.tsx",
     "packages/**/*.vue",
-    "packages/global.d.ts"
-, "vite.config.build.ts"  ],
+    "packages/global.d.ts",
+    "vite.config.build.ts",
+    "packages/ccl-design/*.json"
+  ],
   "references": [
     {
       "path": "./tsconfig.node.json"
