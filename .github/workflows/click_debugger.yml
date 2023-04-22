@@ -1,0 +1,14 @@
+name: debugger
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Debug
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: echo $NODE_AUTH_TOKEN    
