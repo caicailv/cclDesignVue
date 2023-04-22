@@ -31,9 +31,9 @@ jobs:
       - name: build
         run: pnpm build
 
-
       - name: 发布新版本
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: 
           npm publish ./dist
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
