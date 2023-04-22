@@ -1,6 +1,6 @@
 # ccl-design
 
-菜菜驴的 vue 组件库,使用 vue3+vite+pnpm 搭建,仅供学习参考
+菜菜驴的 vue 组件库,使用 vue3+vite+pnpm 搭建,仅供学习参考___
 
 ## Install
 

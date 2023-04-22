@@ -1,6 +1,6 @@
 {
   "name": "ccl-design",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "ccl design can quickly build interactive interfaces in vue3 applications.",
   "keywords": [
     "ccl",
