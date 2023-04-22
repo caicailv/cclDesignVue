@@ -13,7 +13,8 @@
   "scripts": {
     "clean": "rimraf dist",
     "start": "vite --config ./start/vite.config.ts  serve ./start/",
-    "commit": "cz",
+    "ga":"git add .",
+    "commit": "pnpm ga && cz",
     "prepare": "husky install",
     "test": "vitest",
     "build": "pnpm clean && vite build --config ./vite.config.build.ts",
