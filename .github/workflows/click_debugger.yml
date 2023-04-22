@@ -10,5 +10,5 @@ jobs:
 
       - name: Debug
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOK }}
         run: echo $NODE_AUTH_TOKEN    
