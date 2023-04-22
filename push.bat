@@ -1,5 +1,4 @@
 @echo off
-set /p msg=input commit content:
 echo git add .
 cmd /c "git add ."
 echo pnpm cz
