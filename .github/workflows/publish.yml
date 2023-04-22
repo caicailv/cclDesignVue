@@ -1,0 +1,27 @@
+name: 发布新版本
+
+on:
+  push:
+    tags:
+      - 'v*'
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v2
+
+      - name: 设置 Node.js 版本
+        uses: actions/setup-node@v2.4.0
+        with:
+          node-version: '14'
+
+      - name: 安装依赖
+        run: npm install
+
+      - name: 发布新版本
+        run: |
+          npm version patch -m "Upgrade to %s [skip ci]"
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
