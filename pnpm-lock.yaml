@@ -28,7 +28,7 @@ importers:
         version: 2.3.2(vue@3.2.47)
       ccl-design:
         specifier: workspace:*
-        version: 'link:'
+        version: link:packages/ccl-design
       commitizen:
         specifier: ^4.3.0
         version: 4.3.0
@@ -41,6 +41,9 @@ importers:
       jsdom:
         specifier: ^21.1.1
         version: 21.1.1
+      readline:
+        specifier: ^1.3.0
+        version: 1.3.0
       rimraf:
         specifier: ^5.0.0
         version: 5.0.0
@@ -73,7 +76,7 @@ importers:
     devDependencies:
       ccl-design:
         specifier: workspace:*
-        version: link:..
+        version: link:../packages/ccl-design
 
 packages:
 
@@ -2925,6 +2928,10 @@ packages:
     engines: {node: '>=8.10.0'}
     dependencies:
       picomatch: 2.3.1
+    dev: true
+
+  /readline@1.3.0:
+    resolution: {integrity: sha512-k2d6ACCkiNYz222Fs/iNze30rRJ1iIicW7JuX/7/cozvih6YCkFZH+J6mAFDVgv0dRBaAyr4jDqC95R2y4IADg==}
     dev: true
 
   /redent@3.0.0:
