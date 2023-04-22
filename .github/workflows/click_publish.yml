@@ -8,9 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Debug
-        run: echo $NODE_AUTH_TOKEN    
-        
       - name: 检出仓库
         uses: actions/checkout@v3
 
@@ -36,7 +33,8 @@ jobs:
  
       - name: 发布新版本
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.ccl_token }}
         run: 
+          npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
           npm publish ./dist
 
