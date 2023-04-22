@@ -1,9 +1,8 @@
 name: 发布新版本
 
 on:
-  push:
-    tags:
-      - 'v*'
+  workflow_dispatch:
+  
 jobs:
   publish:
     runs-on: ubuntu-latest
