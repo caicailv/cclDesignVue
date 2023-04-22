@@ -9,19 +9,31 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 检出仓库
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: 设置 Node.js 版本
-        uses: actions/setup-node@v2.4.0
+      # 安装 pnpm
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
         with:
-          node-version: '14'
+          version: 7.17.1
 
-      - name: 安装依赖
-        run: npm install
+      # 安装 node
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          cache: 'pnpm'
+      # 安装依赖项
+      - name: Install
+        run: pnpm i
+
+      # build
+      - name: build
+        run: pnpm build
+
 
       - name: 发布新版本
-        run: |
-          npm version patch -m "Upgrade to %s [skip ci]"
-          npm publish
+        run: 
+          npm publish ./dist
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
