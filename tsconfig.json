@@ -4,28 +4,22 @@
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "node",// 指定 TypeScript 如何从给定模块说明符中查找文件
     "strict": true,
     "sourceMap": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-
     "lib": ["ESNext", "DOM"],
-    "paths": {
-      // "ccl-design": ["./packages/ccl-design/index.ts"],
-    },
     "skipLibCheck": true,
-    "types": ["node"]
+    "typeRoots": ["node_modules/@types", "@types"]
   },
   "include": [
     "packages/**/*.ts",
     "packages/**/*.d.ts",
     "packages/**/*.tsx",
     "packages/**/*.vue",
-    "packages/global.d.ts",
-    "vite.config.build.ts",
     "packages/ccl-design/*.json"
   ],
   "references": [

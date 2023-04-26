@@ -1,11 +1,6 @@
 {
   "name": "ccl-design-vue",
   "private": false,
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
   "workspaces": [
     "packages/*",
     "start"
@@ -18,7 +13,12 @@
     "test": "vitest",
     "build": "pnpm clean && vite build --config ./vite.config.build.ts",
     "setVersion": "node ./packages/scripts/setVersion.js",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+
+    "docs:dev": "vitepress dev ./packages/docs",
+    "docs:build": "vitepress build ./packages/docs",
+    "docs:preview": "vitepress preview ./packages/docs"
+
   },
   "description": "",
   "keywords": [],
@@ -43,9 +43,11 @@
     "vite": "^4.2.1",
     "vite-plugin-dts": "^2.3.0",
     "vite-plugin-vue-setup-extend": "^0.4.0",
+    "vitepress": "1.0.0-alpha.73",
     "vitest": "^0.30.1"
   },
   "dependencies": {
     "vue": "^3.2.47"
-  }
+  },
+  "version": "0.0.5"
 }

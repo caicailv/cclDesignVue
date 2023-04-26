@@ -75,6 +75,10 @@ const copyPackageJSON = (): void => {
       input: './packages/ccl-design/LICENSE',
       outDir: './dist/LICENSE',
     },
+    {
+      input: './CHANGELOG.md',
+      outDir: './dist/CHANGELOG.md',
+    },
   ]
 
   files.forEach((item) => {
