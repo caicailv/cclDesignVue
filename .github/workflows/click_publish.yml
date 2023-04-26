@@ -31,10 +31,13 @@ jobs:
       - name: build
         run: pnpm build
  
-      - name: 发布新版本
+      - name: 设置变量
         env:
           NODE_AUTH_TOKEN: ${{ secrets.ccl_token }}
         run: 
           npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
+      
+      - name: 发布新版本
+        run:
           npm publish ./dist
 
